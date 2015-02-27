@@ -65,8 +65,27 @@
               <p>Dźwięk: Andrzej Marzęcki</p>
             </div>
             <div class="sixteen wide centered center aligned column">
-              <div id="vc-main" data-access-token="07e27a08d9d4760ed5376b894e207b5f"></div>
-              <script type="text/javascript" src="http://assets.vicomi.com/assets/widgets_static.js"></script>
+              <!-- START: Livefyre Embed -->
+              <div id="livefyre-comments"></div>
+              <script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
+              <script type="text/javascript">
+              (function () {
+                  var articleId = fyre.conv.load.makeArticleId(null);
+                  fyre.conv.load({}, [{
+                      el: 'livefyre-comments',
+                      network: "livefyre.com",
+                      siteId: "371922",
+                      articleId: articleId,
+                      signed: false,
+                      collectionMeta: {
+                          articleId: articleId,
+                          url: fyre.conv.load.makeCollectionUrl(),
+                      }
+                  }], function() {});
+              }());
+              </script>
+              <!-- END: Livefyre Embed -->
+                          
             </div>
           </div>
         </div>
