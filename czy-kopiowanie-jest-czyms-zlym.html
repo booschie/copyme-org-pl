@@ -70,13 +70,27 @@
               <script type="text/javascript" src="http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"></script>
               <script type="text/javascript">
               (function () {
+                  var customStrings = {
+                     postButton: "New Post As Text",
+                     shareButton: "Podaj dalej",
+                     listenerCount: "słuchacz",
+                     listenerCountPlural: "%s słuchaczy",
+                     commentCountLabel: "%s komentarz",
+                     commentCountLabelPlural: "%s komentarzy",
+                     sortNewest: "Najnowsze",
+                     sortOldest: "Najstarsze",
+                     sortHotThreads: "Gorące tematy",
+                     follow: "Obserwuj"
+                  };
+                  networkConfig["strings"] = customStrings;
                   var articleId = fyre.conv.load.makeArticleId(null);
-                  fyre.conv.load({}, [{
+                  fyre.conv.load(networkConfig, [{
                       el: 'livefyre-comments',
                       network: "livefyre.com",
                       siteId: "371922",
                       articleId: articleId,
                       signed: false,
+                      language: "pl",
                       collectionMeta: {
                           articleId: articleId,
                           url: fyre.conv.load.makeCollectionUrl(),
